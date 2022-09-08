@@ -1,0 +1,29 @@
+<p>methode3 works!</p>
+
+<div class="btn-group w-100" role="group" aria-label="Basic example">
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="onMediaChanged(mediaType.medium)"
+  >
+    Medium
+  </button>
+  <button
+    type="button"
+    class="btn btn-sucess"
+    (click)="onMediaChanged(mediaType.linkedIn)"
+  >
+    LinkedIn
+  </button>
+  <button
+    type="button"
+    class="btn btn-warning"
+    (click)="onMediaChanged(mediaType.scoop)"
+  >
+    Scoop
+  </button>
+ </div>
+  <!-- Media starts here -->
+  <app-scoop *ngIf="selectedType === mediaType.scoop"></app-scoop>
+  <app-medium  *ngIf="selectedType === mediaType.medium"></app-medium>
+  <app-linkedin  *ngIf="selectedType === mediaType.linkedIn"></app-linkedin>
